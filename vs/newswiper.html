@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Slider with Swiper.js</title>
+  <!-- Include Swiper.css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    .swiper-container {
+      width: 100%;
+      /* height: 300px; */
+    }
+
+    .button-swiper-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .button-swiper-slide {
+    border: 1px solid black;
+      margin: 0 10px;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .button-swiper-slide.active {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Slides Swiper -->
+  <div class="swiper-container" id="slides">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="slide1.jpg" alt="Slide 1" />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aspernatur similique nobis neque modi, sunt voluptatibus necessitatibus repellat repellendus quia omnis, reprehenderit cupiditate incidunt sequi. Nobis aperiam, dolor recusandae nesciunt neque illum aspernatur ad fugit in laudantium blanditiis sed, natus tenetur facere vero minima sapiente error aut nostrum quaerat, pariatur eligendi? Eligendi mollitia natus recusandae libero animi molestiae, corporis aliquam nulla nobis ut a eveniet, ipsum eius ex quasi cumque repudiandae odit modi reprehenderit ducimus quis sapiente officia! Vel laborum aut deleniti natus animi corrupti quas itaque ducimus vitae, aperiam exercitationem pariatur quia amet quidem, assumenda ex enim necessitatibus sequi laboriosam alias at. Obcaecati officia libero voluptates explicabo voluptate dolorum doloremque sit at deleniti harum quas esse, voluptas tempore assumenda qui modi eveniet asperiores repellat, quo recusandae? Blanditiis, ipsa animi fuga repudiandae sed molestiae quos adipisci! Possimus, velit. Explicabo dignissimos eum quaerat ipsum optio, sit consequatur quae distinctio deserunt laborum? Labore sint delectus fuga ad mollitia necessitatibus molestias! Recusandae fuga nisi reiciendis dolor in ipsum quidem provident esse eveniet nam voluptatem quas excepturi iste, alias sapiente laboriosam debitis inventore consequuntur perspiciatis quisquam tempora porro officia dolores. Perferendis, est sit officia culpa optio fugit necessitatibus, error tempore earum reiciendis corrupti numquam eveniet quam ipsum molestiae? Quis libero, rem, mollitia laborum officiis reprehenderit dolore in quos, tempore voluptatibus perspiciatis repudiandae. Explicabo incidunt dicta quidem vero reprehenderit sit praesentium id, fugit repellat, a, itaque porro tempore corporis! Praesentium adipisci voluptate tenetur minima, nulla pariatur cupiditate quidem. Ipsum nulla, minima quod, numquam reiciendis natus molestiae quas delectus, doloribus vitae facilis! Animi adipisci dolor labore nulla quis iste praesentium! Doloremque architecto natus consequuntur exercitationem dignissimos eligendi excepturi qui animi sit consequatur, tempore enim magni recusandae blanditiis, obcaecati numquam suscipit nostrum mollitia dolores esse veniam! Obcaecati veritatis laudantium id, at aliquid facere cumque quasi velit, optio officia necessitatibus praesentium culpa voluptas blanditiis eligendi voluptatum! Quos totam quibusdam, esse voluptatum voluptatem eos molestiae eum, corrupti voluptatibus mollitia deleniti assumenda cum non. Explicabo commodi voluptates ad saepe voluptatum ratione eaque quod iste laborum alias? Magnam ea ut, quasi sunt velit eum dolorem adipisci. Non blanditiis nisi quae nulla incidunt qui ad magnam cupiditate placeat dolor eligendi illo quis, itaque quidem. Architecto dolorum perspiciatis accusamus enim error nobis a totam voluptatem iusto alias? Officiis nulla corporis deleniti nihil earum culpa odio eveniet animi, magni facilis odit et minus cupiditate, repellendus ea maiores fuga unde nam ipsum! Nobis, voluptates molestias. Odit laborum ducimus harum deleniti nostrum unde explicabo ea aliquam itaque magnam vero aspernatur voluptatem sint enim, assumenda, sed suscipit incidunt consectetur. Sit tempore officiis blanditiis molestias voluptatum modi voluptate quo aspernatur, harum odit aperiam recusandae quasi aut eum, esse, quod reiciendis ut. Beatae labore minus maiores quasi mollitia debitis vitae laboriosam, totam molestiae sequi similique magni. Blanditiis nam doloribus delectus labore aliquid cupiditate! Quisquam, ab corporis assumenda enim officiis nihil inventore deleniti, quibusdam, officia commodi et voluptatem a cumque. In ratione beatae, aut reprehenderit repellendus pariatur, ducimus laudantium nihil aspernatur eveniet veritatis? Odit quasi, est molestias fuga quas cum.</p>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="slide2.jpg" alt="Slide 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="slide3.jpg" alt="Slide 3" />
+      </div>
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <img src="slide4.jpg" alt="Slide 4" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Buttons Swiper -->
+  <div class="button-swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide button-swiper-slide">1</div>
+      <div class="swiper-slide button-swiper-slide">2</div>
+      <div class="swiper-slide button-swiper-slide">3</div>
+      <div class="swiper-slide button-swiper-slide">4</div>
+    </div>
+  </div>
+
+  <!-- Include Swiper.js -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize the Slides Swiper
+    var slidesSwiper = new Swiper("#slides", {
+      autoplay: {
+        delay: 3000,
+      },
+    });
+
+    // Initialize the Buttons Swiper
+    var buttonsSwiper = new Swiper(".button-swiper-container", {
+      slidesPerView: 4,
+      spaceBetween: 10,
+      slideToClickedSlide: true,
+      on: {
+        slideChange: function () {
+          slidesSwiper.slideTo(buttonsSwiper.activeIndex);
+        },
+      },
+    });
+
+    // Highlight the active button
+    slidesSwiper.on("slideChange", function () {
+      var activeSlideIndex = slidesSwiper.activeIndex;
+      buttonsSwiper.slideTo(activeSlideIndex);
+    });
+
+    // Add click event to buttons
+    var buttonSlides = document.querySelectorAll(".button-swiper-slide");
+    for (var i = 0; i < buttonSlides.length; i++) {
+      buttonSlides[i].addEventListener("click", function (event) {
+        var index = Array.from(buttonSlides).indexOf(event.target);
+        slidesSwiper.slideTo(index);
+      });
+    }
+  </script>
+</body>
+</html>
