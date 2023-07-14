@@ -67,7 +67,7 @@ const users = {
 
 const newObj=Object.assign({},users)
 
-newObj.name='Aditya'
+newObj.name='Adi'
 
 console.log(newObj)
 
